@@ -37,13 +37,13 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
   v = {
-    -- continuous indentation
+    -- continuous indntation
     ["<"] = "<gv",
     [">"] = ">gv",
 
     -- Move multiple lines in Visual mode
-    J = ":move '>+1<CR>gv=gv",
-    K = ":move '<-2<CR>gv=gv",
+    J = ":move '>+1<cr><cr>gv",
+    K = ":move '<-2<cr><cr>gv",
   },
   t = {
     ["<Esc>"] = "<C-\\><C-n>",
