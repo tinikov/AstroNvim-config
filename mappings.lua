@@ -7,9 +7,6 @@ return {
   -- first key is the mode
   n = {
     -- second key is the lefthand side of the map
-    -- scroll window
-    ["<C-j>"] = "4j",
-    ["<C-k>"] = "4k",
     -- navigate buffer tabs with `H` and `L`
     L = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
@@ -47,10 +44,6 @@ return {
     -- Move multiple lines in Visual mode
     J = ":move '>+1<CR>gv=gv",
     K = ":move '<-2<CR>gv=gv",
-
-    -- scroll window
-    ["<C-j>"] = "4j",
-    ["<C-k>"] = "4k",
   },
   t = {
     ["<Esc>"] = "<C-\\><C-n>",
