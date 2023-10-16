@@ -53,6 +53,9 @@ return {
     servers = {
       -- "pyright"
     },
+    capabilities = {
+      offsetEncoding = { "utf-16" },
+    },
   },
 
   -- Configure require("lazy").setup() options
@@ -70,7 +73,7 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
-    -- suppress encoding warning for clangd
+    -- -- suppress encoding warning for clangd
     -- local capabilities = vim.lsp.protocol.make_client_capabilities()
     -- capabilities.offsetEncoding = { "utf-16" }
     -- require("lspconfig").clangd.setup { capabilities = capabilities }
