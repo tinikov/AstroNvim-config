@@ -7,17 +7,23 @@ return {
   -- first key is the mode
   n = {
     -- second key is the lefthand side of the map
-
+    -- scroll window
+    ["<C-j>"] = "4j",
+    ["<C-k>"] = "4k",
     -- navigate buffer tabs with `H` and `L`
-    -- L = {
-    --   function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
-    --   desc = "Next buffer",
-    -- },
-    -- H = {
-    --   function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-    --   desc = "Previous buffer",
-    -- },
-
+    L = {
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Next buffer",
+    },
+    H = {
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Previous buffer",
+    },
+    -- use nvim.project
+    ["<leader>fp"] = {
+      ":Telescope projects<cr>",
+      desc = "Find projects",
+    },
     -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
       function()
@@ -33,8 +39,20 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
+  v = {
+    -- continuous indentation
+    ["<"] = "<gv",
+    [">"] = ">gv",
+
+    -- Move multiple lines in Visual mode
+    J = ":move '>+1<CR>gv=gv",
+    K = ":move '<-2<CR>gv=gv",
+
+    -- scroll window
+    ["<C-j>"] = "4j",
+    ["<C-k>"] = "4k",
+  },
   t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
+    ["<Esc>"] = "<C-\\><C-n>",
   },
 }
