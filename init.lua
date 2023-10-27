@@ -19,7 +19,9 @@ return {
 
   -- Set colorscheme to use
   -- colorscheme = "astrodark",
-  colorscheme = "catppuccin",
+  colorscheme = "catppuccin-macchiato",
+  -- colorscheme = "kanagawa-wave",
+  -- colorscheme = "melange",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
