@@ -6,6 +6,7 @@ return {
       filtered_items = {
         hide_gitignored = false,
         always_show = {
+          ".gitignore",
           ".gitignored",
         },
         never_show = {
