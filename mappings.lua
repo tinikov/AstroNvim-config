@@ -16,11 +16,6 @@ return {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
     },
-    -- use nvim.project
-    ["<leader>fp"] = {
-      ":Telescope projects<cr>",
-      desc = "Find projects",
-    },
     -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
       function()
@@ -33,8 +28,20 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    -- use nvim.project
+    ["<leader>fp"] = {
+      ":Telescope projects<cr>",
+      desc = "Find projects",
+    },
+    -- close split screens
+    -- ["<leader>sc"] = {
+    --   "<C-w><C-q>",
+    --   desc = "Close the active window",
+    -- },
+    -- ["<leader>so"] = {
+    --   "<C-w><C-o>",
+    --   desc = "Close all but the active window",
+    -- },
   },
   v = {
     -- continuous indntation

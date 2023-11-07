@@ -1,7 +1,11 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
-    sources = { "filesystem", "git_status" },
+    -- sources = { "filesystem", "git_status" },
+    sources = { "filesystem" },
+    source_selector = {
+      winbar = false,
+    },
     filesystem = {
       filtered_items = {
         hide_gitignored = false,
