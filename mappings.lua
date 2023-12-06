@@ -33,14 +33,10 @@ return {
       ":Telescope projects<cr>",
       desc = "Find projects",
     },
-    -- close split screens
-    -- ["<leader>sc"] = {
-    --   "<C-w><C-q>",
-    --   desc = "Close the active window",
-    -- },
-    -- ["<leader>so"] = {
-    --   "<C-w><C-o>",
-    --   desc = "Close all but the active window",
+    -- use broot
+    -- ["<leader>tb"] = {
+    --   function() require("astronvim.utils").toggle_term_cmd "broot" end,
+    --   desc = "ToggleTerm broot",
     -- },
   },
   v = {
